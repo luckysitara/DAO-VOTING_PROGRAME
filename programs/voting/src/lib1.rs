@@ -1,5 +1,6 @@
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program::program_error::ProgramError;
+use anchor_lang::solana_program::system_program;
 use std::collections::HashMap;
 
 mod instructions;
@@ -12,7 +13,7 @@ use state::*;
 use processor::*;
 use zk_proof::*;
 
-declare_id!("");
+declare_id!("Your_Program_ID_Here");
 
 #[program]
 mod voting {
@@ -37,12 +38,7 @@ mod voting {
             Ok(())
         }
 
-        pub fn create_proposal(
-            &mut self,
-            ctx: Context<CreateProposal>,
-            title: String,
-            description: String,
-        ) -> ProgramResult {
+        pub fn create_proposal(&mut self, ctx: Context<CreateProposal>, title: String, description: String) -> ProgramResult {
             let proposal = Proposal {
                 id: self.proposals.len() as u32,
                 title,
@@ -80,18 +76,4 @@ mod voting {
             Ok(())
         }
     }
- }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use anchor_lang::solana_program::clock::Epoch;
-    use anchor_lang::solana_program::clock::MockSysvarEpoch;
-    use anchor_lang::solana_program::program_pack::Pack;
-    use anchor_lang::solana_program::pubkey::Pubkey;
-    use anchor_lang::solana_program::system_program;
-    use anchor_lang::solana_program::sysvar;
-    use solana_program_test::*;
-    use solana_program_test::*;
-    use solana_program::instruction;
-    let
+}
