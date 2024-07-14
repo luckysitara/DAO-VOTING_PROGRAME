@@ -3,3 +3,11 @@ workspace = "programs"
 version = "0.18.0"
 
 program = "voting"
+# Anchor.toml
+
+package_name = "solana_dao_voting"
+author = ["Bughacker <bughackerjanaan@gmail.com>"]
+
+[programs.solana_dao_voting]
+id = ""
+version = "0.1.0"

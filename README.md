@@ -23,8 +23,8 @@ This repository contains a decentralized autonomous organization (DAO) voting pr
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/luckysitara/dao-voting-program.git
-   cd dao-voting-program
+   git clone https://github.com/luckysitara/dao-voting_program.git
+   cd dao-voting_program
    ```
 
 2. **Install Dependencies**:
@@ -34,10 +34,8 @@ This repository contains a decentralized autonomous organization (DAO) voting pr
 
 3. **Compile Circuits**:
    ```bash
-   circom circuits/vote.circom --r1cs --wasm --sym --c
-   snarkjs setup --protocol groth
-   snarkjs groth16 setup circuits/vote.r1cs circuits/vote_0000.zkey circuits/vote_final.zkey
-   snarkjs zkey export verificationkey circuits/vote_final.zkey circuits/verification_key.json
+   chmod +x install-depend.sh
+
    ```
 
 4. **Deploy Solana Program**:
@@ -51,13 +49,7 @@ This repository contains a decentralized autonomous organization (DAO) voting pr
    npm start
    ```
 
-## File Structure
 
-- **app/**: Solana programs and Anchor configuration.
-- **circuits/**: ZK proof circuits and keys.
-- **src/**: Frontend React application.
-  - **components/**: React components for voting and tallying results.
-  - **zk_utils.js**: Utilities for generating and verifying ZK proofs.
 
 ## Contributions
 
