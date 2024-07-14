@@ -23,7 +23,7 @@ This repository contains a decentralized autonomous organization (DAO) voting pr
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/dao-voting-program.git
+   git clone https://github.com/luckysitara/dao-voting-program.git
    cd dao-voting-program
    ```
 
