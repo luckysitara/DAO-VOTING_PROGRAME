@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("Your_Program_ID_Here");
+declare_id!(" ");
 
 #[program]
 mod voting {

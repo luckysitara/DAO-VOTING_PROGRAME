@@ -13,7 +13,7 @@ use state::*;
 use processor::*;
 use zk_proof::*;
 
-declare_id!("Your_Program_ID_Here");
+declare_id!(" ");
 
 #[program]
 mod voting {
