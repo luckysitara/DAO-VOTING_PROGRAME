@@ -1,0 +1,5 @@
+workspace = "programs"
+
+version = "0.18.0"
+
+program = "voting"
